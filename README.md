@@ -1,4 +1,7 @@
 ---
+title: Learning Python
+description: A comprehensive guide and reference for mastering Python programming, covering core concepts and advanced topics.
+---
 
 ## Learning Python
 
@@ -12,4 +15,4 @@ This repository documents my journey through the core concepts and advanced topi
 - **Virtual Environment Setup**: Best practices for setting up and managing virtual environments for Python projects.
 - **Database Operations**: CRUD operations with SQLite, JSON data handling, and MongoDB interactions.
 
----
+Explore and enhance your Python skills. Contributions are welcome!
