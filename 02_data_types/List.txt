@@ -1,0 +1,117 @@
+LIST in python, LIST IS MUTABLE
+
+>>> tea_var = ["black","Oolong","white","green"]
+>>> print(tea_var)
+['black', 'Oolong', 'white', 'green']
+>>> print(tea_var[1])
+Oolong
+
+Slicing dicing of the list can be done too
+
+>>> print(tea_var[1:3])
+['Oolong', 'white']
+>>> tea_var[0] = "masala"
+>>> print(tea_var)
+['masala', 'Oolong', 'white', 'green']
+
+inserting values using slicing dicing
+>>> tea_var[1:2]
+['Oolong']
+>>> tea_var[1:2] = "lemon"
+>>> tea_var
+['black', 'l', 'e', 'm', 'o', 'n', 'white', 'green']
+if string directly pass each char of string will be treated as list and above output can be seen
+
+>>> tea_var = ["black","Oolong","white","green"]
+>>> tea_var[1:2] = ["masala"]
+>>> print(tea_var)
+['black', 'masala', 'white', 'green']
+
+
+so the passing string should be inside the [] 
+Replacing multiple values in list
+>>> print(tea_var)
+['black', 'masala', 'white', 'green']
+>>> tea_var[1:3]
+['masala', 'white']
+>>> tea_var[1:3] = ["oolong","dudh"]
+>>> print(tea_var)
+['black', 'oolong', 'dudh', 'green']
+
+>>> tea_var = ["black","Oolong","white","green"]
+>>> print(tea_var)
+['black', 'Oolong', 'white', 'green']
+>>> tea_var[1:1]=["testtea1","testtea2"]  
+>>> print(tea_var)
+['black', 'testtea1', 'testtea2', 'Oolong', 'white', 'green']
+
+now removing the 2 testtea, inserting nothing
+['black', 'testtea1', 'testtea2', 'Oolong', 'white', 'green']
+>>> tea_var[1:3] = []
+>>> print(tea_var)
+['black', 'Oolong', 'white', 'green']
+
+>>> for tea in tea_var:
+...     print(tea, end="_")
+... 
+black_Oolong_white_green_>>> 
+
+To add a value at the end of the list use .append()
+>>> tea_var.append("masala")
+>>> tea_var
+['black', 'Oolong', 'white', 'green', 'masala']
+
+checking if the value is in list or not
+>>> if "masala" in tea_var:
+...     print("Masala chiya cha")
+... 
+Masala chiya cha
+
+deleting the last value of the list use pop() doesn't take any parameter
+>>> tea_var
+['black', 'Oolong', 'white', 'green', 'masala']
+>>> tea_var.pop()
+'masala'
+>>> tea_var
+['black', 'Oolong', 'white', 'green']
+
+to remove a value at exact index in list use remove
+>>> tea_var.remove("green")
+>>> tea_var
+['black', 'Oolong', 'white']
+
+to insert a value at specific position use insert(index, value)
+>>> tea_var = ["black","Oolong","white","green"]     
+>>> tea_var
+['black', 'Oolong', 'white', 'green']
+>>> tea_var.insert(1,"masal")
+>>> tea_var
+['black', 'masal', 'Oolong', 'white', 'green']
+>>>
+
+To make a copy 
+tea_var_copy = tea_var
+this is only point to the value reference not exactly the copy will be made
+both var has same value reference
+
+use .copy() to make a new value reference
+>>> tea_var_copy = tea_var.copy()
+>>> print(tea_var_copy)
+['black', 'masal', 'Oolong', 'white', 'green']
+
+
+LIST Comprehension
+>>> range(10)
+range(0, 10)
+
+>>> y = range(10)
+>>> y
+range(0, 10)
+
+>>> squared_nums = [x**2 for x in range(10)]
+>>> squared_nums
+[0, 1, 4, 9, 16, 25, 36, 49, 64, 81]
+
+>>> cube_num = [ y**3 for y in range(11) ]
+>>> cube_num
+[0, 1, 8, 27, 64, 125, 216, 343, 512, 729, 1000]

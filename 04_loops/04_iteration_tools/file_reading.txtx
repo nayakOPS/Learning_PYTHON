@@ -1,0 +1,157 @@
+open() is used to open a file and store it's instance in a variable
+reading the script.py file in this current folder
+
+>>> f=open("script.py")
+
+>>> f.readline()
+
+'import time\n'
+
+>>> f.readline()
+'\n'
+>>> f.readline()
+'print("Hello World")\n'
+>>> f.readline()
+'\n'
+>>> f.readline()
+'username = "Binayak"\n'
+>>> f.readline()
+'print(username)'
+>>> f.readline()
+''
+>>> f.readline()
+''
+
+after completing reading the eachline '' and empty string exception is returned
+
+using loop tools and Iteration method for more info look the fig and about_loop.txt
+
+>>> f=open("script.py")
+>>> f.__next__()
+'import time\n'
+
+this is the raw way of how the readline() function was working
+
+>>> f.__next__()
+'import time\n'
+>>> f.__next__()
+'\n'
+>>> f.__next__()
+'print("Hello World")\n'
+>>> f.__next__()
+'\n'
+>>> f.__next__()
+'username = "Binayak"\n'
+>>> f.__next__()
+'print(username)'
+>>> f.__next__()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+
+StopIterationexception is properly handled
+
+due to files is Iterableusing classic loop this is how it is done
+>>> for line in open("script.py"):
+...     print(line,end='')
+...
+import time
+print("Hello World")
+username = "Binayak"
+print(username)
+
+Now, using forloop
+>>> f=open("script.py") 
+>>> while True:
+...     line=f.readline()
+...     if not line: break
+...     print(line, end="")
+...
+
+import time
+print("Hello World")
+username = "Binayak"
+print(username)
+
+iterating list using Iterable tool : iter()
+>>> myList = [1,2,3,4]
+>>> I = iter(myList)
+>>> I
+<list_iterator object at 0x0000024E58765DE0>
+I location is shown , memory location is pointed , the address is the first object memory address fro starting the Iteration
+
+>>> I.__next__()
+1
+>>> I.__next__()
+2
+>>> I.__next__()
+3
+>>> I.__next__()
+4
+>>> I.__next__()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+
+When Iteraing the I hold the initial address it needs to be change bu the address changing is done internally by __next__
+
+ I
+<list_iterator object at 0x0000024E58765DE0>
+
+but the working of the file iteration is bit different the iter() tool is already in the file when made the instance of file open 
+E.g.:
+
+>>> f = open("script.py")
+>>> iter(f) is f
+True
+
+>>> iter(f) is f.__iter__()
+True
+
+but this is different for list
+>>> myNewlist
+[1, 2, 3, 4]
+>>> iter(myNewlist) is myNewlist
+False
+
+so hence,file instance variable itself is iterable object but not in case of list look above code scenario
+
+dictionary are also iterable, look below:
+>>> d = {'a':1, 'b':2}
+>>> for key in d.keys():
+...     print(key)
+... 
+a
+b
+>>> I = iter(d)
+>>> I
+<dict_keyiterator object at 0x000001FD349FDCB0>
+>>> next(I)
+'a'
+>>> next(I)
+'b'
+>>> next(I)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration
+>>> 
+
+Range iteration
+>>> R = range(4)
+>>> R
+range(0, 4)
+>>> I = iter(R)
+>>> I
+<range_iterator object at 0x000001BD6B04A0B0>
+>>> next(I) 
+0
+>>> next(I)
+1
+>>> next(I)
+2
+>>> next(I)
+3
+>>> next(I)
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+StopIteration

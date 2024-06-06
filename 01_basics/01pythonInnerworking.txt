@@ -1,0 +1,34 @@
+PY source code --- > Byte Code --- > Python VM(Virtual Machine)
+
+VM fetches the Bytecode and runs the programm
+Most of the time the ByteCode is hidden, times like importing .py modules the bytecode is generated as folder __pycache__
+
+Step 1.) Compile to ByteCode
+            low level & Platform Independent (ByteCode)
+
+    -.pyc -->  this is compiled python (frozen Binaries)
+
+    (__pycache__)
+        system folder for compiled codes and maintains the version too
+        used for internal working by python
+
+    hello_world.cpython-312.pyc
+    as our source code changes a diff algo( difference tracking algorithm is used )
+    compare the changes of the previous and current Source Code
+
+    .cpython == standard python (312) is the version
+
+    works only for imported files
+    not for top level files
+
+Python Virtual Machine (PVM)
+
+-->Code to loop to iterate byte code
+-->Runt time Engine
+-->Also Known as Python Interpreter
+
+Byte Code is not machine code
+
+-->Python Specific Interpretation
+-->cpython(Standard Implementation), jython, Ironpython, Stackless, PyPy
+

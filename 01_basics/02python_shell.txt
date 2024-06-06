@@ -1,0 +1,23 @@
+to quit
+ctrl + z ==> suspended state
+
+ctrl + d ==> exit, fully terminate
+
+in this terminal shell we cant save our code
+the IDLE shell is mostly used to 
+
+>>> "chai" * 4
+'chaichaichaichai'
+
+We, import a lot of modules in python SC
+>>> import os ==> all the methods of os is imported
+
+>>> import hello_world   
+Hello World
+Nepal is a beautiful country
+>>> hello_world.nepal()
+Nepal is a beautiful country
+
+After changes have been made to imported source code , we need to import the update SourceCode staying in the same path
+  ==> from importlib import reload
+  ==> reload(file_name)

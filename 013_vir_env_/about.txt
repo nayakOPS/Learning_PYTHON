@@ -1,0 +1,47 @@
+pip install virtualenv
+
+makes a  virtual enivorment in the dedicated path so the modules will be installed in the vir env , not in the main python module 
+hence it doesnot pollute the main python module
+
+activate virtual enivorment after opening terminal
+
+after any modules aree installed , the installed modules list is made are put in requiremmt.txt file
+
+
+to make a virenv for the deciated path we just have installed package globally
+
+virtualenv .venv 
+python -m venv .venv
+
+to activate venv
+.\env_name\Scripts\activate
+
+dont do cd path/to/activate
+ .venv/Scripts/activate
+(.venv) PS C:\Users\brian\Documents\learning_python\013_vir_env_> 
+
+pip list command shows all the modules installed 
+
+pip     24.0
+
+pip install pymongo
+this will be installed at virtualenv
+
+redirecting all the installed list of modules to requirement.txt
+pip list > requirement.txt
+
+Package   Version
+--------- -------
+dnspython 2.6.1
+pip       24.0
+pymongo   4.7.2
+
+
+these are list of installed modules
+
+now can install all modules all at once
+pip install -r requirements.txt
+
+to deactivate the virtualenv
+just type deactivate keyword
+

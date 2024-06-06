@@ -1,0 +1,36 @@
+
+
+To make a var glonbal inside a scope you can make it global using global keyword
+
+x = 88;
+ def xer():
+    global x
+    x=12
+
+xer()
+print(x)
+
+def f1():
+    x=88
+    def f2():
+        print(x)
+    return f2       this returns the reference to f2 
+    f2() but this is function call
+f1()
+myresult = f1()
+myresult()
+
+the f1 has instance of f2 , but f2 backpacks all the necessary details from parent so x is accessible
+this is called closure , back theory definition associated varibal and attached memory reference is taken
+
+ 
+ factory function // this is the proper closure the instance is returned
+
+ def chaicoder(num):
+    def actual(x):
+        return x ** num
+    return actual
+
+f = chaicoder(2)
+
+print(f(3))

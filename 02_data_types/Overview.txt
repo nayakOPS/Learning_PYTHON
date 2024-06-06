@@ -1,0 +1,19 @@
+Overview of the Data Types in Python
+
+Object Types / Data Types
+
+- Number : 1,2,3,4
+- String : "dsfds" , 'safas', 'sda"sa'
+- List : Continuous Memory space like array indexed accordingly []
+- Tuple : has parenthesis(), like array
+- dictionary : like objects, has {} braces
+
+- Set : set('abc'), {'a','b','c'} stores only unique value not duplicate one
+
+File Mechanism
+- File : open('eggs.txt')
+
+- Boolean : True or False
+- None : none
+
+- Advance : Decorators, Generators, Iterators, MetaProgramming

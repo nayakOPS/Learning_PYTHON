@@ -1,0 +1,131 @@
+In Dictionary key and values are explicitly given
+
+the key and value combination is called a single field , item
+{"key":"value"}
+
+making a Dictionary 
+>>> chiya_type = {"masala":"spicy","ginger":"zesty","green":"mild"}
+>>> chiya_type
+{'masala': 'spicy', 'ginger': 'zesty', 'green': 'mild'}
+
+accessing the Dictionary field value, accessing using ["key_name"]
+ chiya_type["ginger"]
+'zesty'
+
+.get() method also can be used to access the particular key(passed in param) and its 
+>>> chiya_type.get("masala")
+'spicy'
+
+to change the Dictionary items
+>>> chiya_type["green"]="fresh"
+>>> chiya_type
+{'masala': 'spicy', 'ginger': 'zesty', 'green': 'fresh'}
+
+looping in Dictionary
+printting the keys
+
+>>> for chiya in chiya_type:
+...     print(chiya)
+...
+masala
+ginger
+green
+
+
+now accessing the keys value too
+>>> for chiya in chiya_type:
+...     print(chiya, chiya_type[chiya])
+...
+masala spicy
+ginger zesty
+green fresh
+
+Another method , iterating through each item  using key,values and .items()
+>>> for key, value in chiya_type.items():
+...     print(key, value)
+...
+masala spicy
+ginger zesty
+green fresh
+
+questioning with keys, conditionals
+>>> if "masala" in chiya_type:
+...     print("We do have Masala Chiya")
+...
+We do have Masala Chiya
+
+len() calculates the total field in the Dictionary
+>>> print(len(chiya_type))
+3
+
+adding more values to the Dictionary
+>>> chiya_type["Earl Grey"] = "Citrus"
+>>> chiya_type
+{'masala': 'spicy', 'ginger': 'zesty', 'green': 'fresh', 'Earl Grey': 'Citrus'}
+
+to remove the field , use pop() the Dictionary doesnot have any sequence of data stored order , so in pop(param) need to pass the key
+>>> chiya_type.pop("ginger")
+'zesty'
+>>> chiya_type
+{'masala': 'spicy', 'green': 'fresh', 'Earl Grey': 'Citrus'}
+
+but, popitem() doesnot have param , deletes the last entered key value particular
+>>> chiya_type.popitem()
+('Earl Grey', 'Citrus')
+>>> chiya_type
+{'masala': 'spicy', 'green': 'fresh'}
+
+to delete the memory reference directly, del keyword
+>>> del chiya_type["green"]
+>>> chiya_type
+{'masala': 'spicy'}
+
+>>> chiya_type_copy = chiya_type.copy()
+>>> chiya_type_copy
+{'masala': 'spicy', 'ginger': 'zesty', 'green': 'mild'}
+>>> chiya_type_copy["dudh"]= "milky"
+>>> chiya_type_copy
+{'masala': 'spicy', 'ginger': 'zesty', 'green': 'mild', 'dudh': 'milky'}
+>>> chiya_type
+{'masala': 'spicy', 'ginger': 'zesty', 'green': 'mild'}
+
+Dictionary can also have nested Dictionary for each field
+>>> drink_shop = {
+... "tea" : {"Masala":"Spicy","Green":"Mild","Black":"Strong"},
+... "coffee": {"milk":"sweet","black":"strong","iced":"chill"}
+... }
+>>> print(drink_shop)
+
+{'tea': {'Masala': 'Spicy', 'Green': 'Mild', 'Black': 'Strong'}, 'coffee': {'milk': 'sweet', 'black': 'strong', 'iced': 'chill'}}
+
+to access the specific subset of the nested Dictionary
+>>> drink_shop["coffee"]
+{'milk': 'sweet', 'black': 'strong', 'iced': 'chill'}
+
+>>> drink_shop["coffee"]["iced"]
+'chill'
+
+
+Dictionary Comprehension
+
+>>> sq_nums = { x:x**2 for x in range(6)}
+>>> print(sq_nums)
+{0: 0, 1: 1, 2: 4, 3: 9, 4: 16, 5: 25}
+
+to remove all the values
+>>> sq_nums.clear()
+>>> print(sq_nums)
+{}
+
+making set of key and values differently
+dict keyword also can be used to make Dictionary
+
+>>> keys = ['masala','ginger','lemon']
+>>> default_value = "delicious"
+>>> new_dict = dict.fromkeys(keys, default_value)
+>>> print(new_dict)
+{'masala': 'delicious', 'ginger': 'delicious', 'lemon': 'delicious'}
+
+>>> new_dict = dict.fromkeys(keys, keys)          
+>>> print(new_dict)
+{'masala': ['masala', 'ginger', 'lemon'], 'ginger': ['masala', 'ginger', 'lemon'], 'lemon': ['masala', 'ginger', 'lemon']}

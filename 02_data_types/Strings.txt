@@ -1,0 +1,125 @@
+Strings in python
+
+STRINGS ARE IMMUTABLE
+
+String is treated as List in python
+
+>>> chai = "Milk tea"
+>>> chai
+'Milk tea'
+>>> first_char = chai[0]
+>>> print(first_char)
+M
+
+Slicing the Strings
+>>> chai = "Milk tea"
+>>> slice_chai = chai[0:4]
+>>> print(slice_chai)
+Milk
+
+The last number is not inclusive
+
+slice[ Start : End(Not Inclusive) : HOP ]
+--> HOP also not inclusive nature
+
+>>> num_list = "01234567890"
+>>> num_list[0:10:1]
+'0123456789'
+>>> num_list[0:10:2]
+'02468'
+>>> num_list[0:10:3]
+'0369'
+
+Generally we use unicode Strings
+
+Strings have various methods and functions use ()
+>>> chiya = "dudh_chiya"
+>>> print(chiya.lower())
+dudh_chiya
+
+strip() remove spaces
+>>> chai = "    masal fa   chiaya  "  
+>>> print(chai.strip())
+masal fa   chiaya
+
+replace() replace a specifc String
+>>> print(chiya.replace("dudh","masala"))
+masala_chiya
+
+Converting string to list , use split() param is basis on waht to split
+>>> hobbies = "chess, hiking, tech, reading"
+>>> print(hobbies.split(","))
+['chess', ' hiking', ' tech', ' reading']
+
+find() -- to find a certain string and returns from which index it is started
+>>> print(chiya.find("dudh"))
+0
+if not found returns negative one i.e: -1, and is case sensitive
+
+count() - returns number of String
+>>> chiso = "masla chai coke coke coke coke"
+>>> print(chiso.count("coke"))
+4
+
+
+order formatting 
+{} curly braces are called place holder in sense of Strings
+>>> chiya_type="Masala"
+>>> qt=2
+>>> order = "I ordered {} cups of {} chiya"
+>>> order
+'I ordered {} cups of {} chiya'
+
+>>> print(order.format(qt,chiya_type)) 
+I ordered 2 cups of Masala chiya
+
+List to String conversion , join()
+I ordered 2 cups of Masala chiya
+>>> chiya_ko_variety = ["milk","black","ginger","masala"]
+>>> print(chiya_ko_variety)
+['milk', 'black', 'ginger', 'masala']
+>>> print("-".join(chiya_ko_variety))
+milk-black-ginger-masala
+
+to find the length of the string -- len()
+>>> chiya = "Masala Chiya"
+>>> print(len(chiya))
+12
+
+to print each letter of the string using for loop
+12
+>>> for letter in chiya:
+...     print(letter)
+...  
+M
+a
+s
+a
+l
+a
+
+C
+h
+i
+y
+a
+
+>>> testimonial = "He said, \"He likes black tea\" "
+>>> testimonial
+'He said, "He likes black tea" '
+>>> print(testimonial)
+He said, "He likes black tea"
+
+RAW String
+if want to print the reserved keywords \ in string use raw string r"" , so the string written inside quoation will treat as raw string
+>>> raw_chiya = r"masla\nchiya"
+>>> print(raw_chiya)
+masla\nchiya
+
+can be used in path variable interpolation
+
+Containing in Strings, certain strings contain or not in strings returns true or false
+>>> chiya
+'Masala Chiya'
+>>> print("Masala" in chiya)
+True

@@ -1,0 +1,6 @@
+>>> inscore = input("give me a score value: ")
+give me a score value: 89
+>>> inscore 
+'89'
+
+the entered data is in string format need to convert it to int for manipulation or operation of the numeirc data

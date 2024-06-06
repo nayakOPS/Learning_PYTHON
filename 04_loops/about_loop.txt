@@ -1,0 +1,10 @@
+Behind the scene of the loops in python
+
+Iteration tool by python == for, comprehension, map
+Iterable Objects == lists, files
+    always point the memory address of the starting object
+
+we got reponse which is __next__ , basically says there are more value in memory which are Iterable , and at final memory address a exception for stopping is made
+
+the working is like this 
+The Iteration tool query for Iterable Objects by sending iter() method , in response you got , yes you can  and too with it  and returns __next__ too,

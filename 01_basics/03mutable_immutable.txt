@@ -1,0 +1,58 @@
+Mutable and Immutable in Python
+
+Mutable ==> changeable
+Immutable ==> Unchangeable
+
+data types are objects
+
+Strings are Immutable
+    >>> username = "Binayak"
+    >>> username
+    'Binayak'
+
+    >>> username = "chai"
+    >>> username
+    'chai'
+    
+    But here the username string is changed
+
+>>> x = 10
+>>> z = x
+>>> x
+10
+>>> z
+10
+>>> x = 15
+>>> z
+10
+>>> x
+15
+>>>
+
+    In above scenario, 10 reference is x , and z is also refering to 10, 
+    when x = 15 , so the previous referenceof x changes to 15
+    but we have not changed the z reference it is always refering to 10 directly
+    not the x
+
+
+
+        -- Python Internal Working --
+            most of the things in python are made as object
+
+            Memory reference has object
+            for example ,
+                username = "binayak"
+
+                the string binayak becomes a objects its reference value never changes so it is called immutable\
+
+                Now, username = "Kunwor"
+
+                now the username reference to kunwor String
+                    and the automatic garbage collector removes the reference to "binayaK'
+
+            So , the real meaning is the memory reference can't be change
+
+
+    But, MUTABLE DATA TYPES reference can be changed directly in the memory
+    these are not constant or variables
+    

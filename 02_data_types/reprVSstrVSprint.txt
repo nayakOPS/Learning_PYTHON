@@ -1,0 +1,37 @@
+In Python, `repr()`, `str()`, and `print()` are all related to converting Python objects into human-readable representations, but they serve slightly different purposes:
+
+1. **`repr()`**:
+   - The `repr()` function returns a string representing the object. It's intended to produce a representation of the object that is as close to the Python code as possible, so you can recreate the object using `eval()` (though `eval()` is generally discouraged due to security risks).
+   - It's primarily used for debugging and development purposes.
+
+2. **`str()`**:
+   - The `str()` function converts an object into a string representation. Unlike `repr()`, `str()` is meant to produce a readable, human-friendly representation of the object.
+   - It's used when you want a string version of an object for display to users or for other purposes where readability is important.
+
+3. **`print()`**:
+   - The `print()` function in Python is used to display the string representation of objects on the console or other output streams.
+   - Internally, it calls `str()` on the object to get a printable string representation before displaying it.
+
+Here's a simple example to illustrate the differences:
+
+```python
+class Example:
+    def __init__(self, value):
+        self.value = value
+    
+    def __repr__(self):
+        return f'Example({self.value})'
+    
+    def __str__(self):
+        return f'Value: {self.value}'
+
+# Creating an instance
+obj = Example(42)
+
+# Using repr(), str(), and print()
+print("Using repr():", repr(obj))  # Output: Using repr(): Example(42)
+print("Using str():", str(obj))    # Output: Using str(): Value: 42
+print("Using print():", obj)       # Output: Using print(): Value: 42
+```
+
+In this example, `repr(obj)` returns a string that could be used to recreate `obj`, `str(obj)` returns a more human-readable string representation, and `print(obj)` displays the string representation of `obj` on the console.

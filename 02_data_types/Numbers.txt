@@ -1,0 +1,90 @@
+Numbers are group object in python not a singel object
+
+operator overloading can also be seen in python , as of other languages too
+
+>>> "chai" + "code"
+'chaicode'
+
+>>> 4 + 3
+7
+>>> "nepal" + "7"
+'nepal7'
+
+>>> nepal + 5
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+NameError: name 'nepal' is not defined. Did you mean: 'eval'?
+
+all these type of concatenation can be done with the help of operator overloading
+
+>>> x = 4
+>>> y = 6
+>>> z = 9
+>>> x,y,z
+(4, 6, 9)  ==> this kind of tuple can be seen more complex apps
+
+this can be done too
+>>> x+y, y+3, z
+(10, 9, 9)
+
+Python can handle large number of Big number calculation
+
+chaining conditional checking
+
+>>> x < y < z
+True
+>>> x < y and y < z
+True
+
+Importing Math module and its functionality 
+>>> import math
+>>> math.floor(4.5)
+4
+>>> math.floor(-4.6) 
+-5
+>>> math.floor(3.3)
+3
+
+truncate moves towards zero 0 in numberline
+trunc()
+
+>>> math.trunc(2.8)
+2
+>>> math.trunc(-2.8)
+-2
+
+Python has exact Number precision
+
+j = imaginary Numbers
+
+Random function
+the random function return random number between 0 - 1 , in python you dont need logical manipulation for getting a specific number digits there are pre built function
+
+>>> random.random()
+0.8877288780513384
+
+>>> random.randint(1,6)
+4
+
+>>> random.randint(1,6)   
+5
+
+CHOICE
+>>> l1 = ['lemon','masala','ginger','mint']
+>>> random.choice(l1)
+'masala'
+
+SHUFFLE
+>>> random.shuffle(l1)
+>>> l1
+['ginger', 'lemon', 'masala', 'mint']
+
+Set 
+>>> setone = { 1 ,2, 4,5}
+>>> setone
+{1, 2, 4, 5}
+>>> settwo = { 3,4,7,8,9}
+>>> setone & settwo
+{4}
+>>> setone | settwo
+{1, 2, 3, 4, 5, 7, 8, 9}
