@@ -1,7 +1,3 @@
----
-title: Learning Python
-description: A comprehensive guide and reference for mastering Python programming, covering core concepts and advanced topics.
----
 
 ## Learning Python
 
